@@ -1,7 +1,81 @@
 /**************************************
+GENERAL
+**************************************/
+
+body {
+	margin: 0;
+}
+
+ul li {
+	font-size: 0.8em;
+}
+
+ul li {
+	list-style: none;
+}
+
+/**************************************
 HEADER
 **************************************/
 
 #banner {
 	width: 100%;
+}
+
+/**************************************
+Add Item
+**************************************/
+
+/*Add a new item*/
+legend {
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 10px;
+  color: #FFF;
+  background-color: #97d5ca;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 10em;
+  border: 1px solid #6ebec5;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+.user_input {
+	width: 30em;
+}
+
+/**************************************
+Lists
+**************************************/
+
+#wrapper {
+	margin: 20px 5%;
+}
+
+.wishList, .purchased {
+	width: 45%;
+	color: #666;
+	font-size: 1.5em;
+	padding: 10px 10px;
+}
+
+/*Wish List*/
+
+.wishList {
+	background-color: rgba(151,213,202,.4); 
+	margin-right: 1%;
+	float: left;
+}
+
+/*Purchased List*/
+
+.purchased {
+	background-color: rgba(221,85,63,.4); 
+	float: right;
 }
