@@ -3,15 +3,41 @@
 
 	<head>
 		<title> SHOPPIFY </title>
+<!-- 		<link rel="stylesheet" type="text/css" href="css/reset.css"> -->
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-
+		<link rel="stylesheet" type="text/css" href="css/responsive.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 
 	<body>
 		<img src="img/banner.jpg" id="banner">
 
-		<div id="wrapper">
-
+		<div id="newItem">
+			<form>
+	  			<fieldset>
+	   			 	<legend>Add a new Item to your wishlist</legend>
+			   			 <input class="user_input" value=""><br><br />
+			    		 <button type="button" class="addItem"> Add Item </button>
+			    </fieldset>
+			</form>
 		</div>
 
+		<div id="wrapper">
+			<div class="wishList">
+				<legend>Wish List</legend>
+					<ul></ul>
+
+			</div>
+
+			<div class="purchased">
+				<legend>Purchased</legend>
+					<ul></ul>
+			</div>
+		</div>
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	
 	</body>
+
+</html>
