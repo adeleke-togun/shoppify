@@ -17,6 +17,16 @@ var acts = {
 		acts.item.val("");
 	},
 
+		//A function that fixes an item to a list based on it's status
+	checkUncheck: function(){
+		$(document).on("change", "input[type=checkbox]",function(){
+			if(this.checked){
+				$(this).parent().appendTo(acts.purchased);
+			} else {
+				$(this).parent().appendTo(acts.wishlist);
+			}
+		});
+	},
 	//create a function that initializes actions
 	initialize: function(){
 		//Assign add item button to variable addItem
@@ -28,8 +38,8 @@ var acts = {
 		//Assign the purchased list to a variable
 		acts.purchased = $(".purchased ul")
 		acts.addItem.click(acts.addtoList);	
-			
-
+		
+		acts.checkUncheck();
 	}
 }
 
