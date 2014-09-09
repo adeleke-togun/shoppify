@@ -61,9 +61,7 @@ var acts = {
 		//Assign the wishlist to a variable
 		acts.wishlist = $(".wishList ul")
 		//Assign the purchased list to a variable
-		acts.purchased = $(".purchased ul")
-		acts.addItem.click(acts.addtoList);	
-		
+		acts.purchased = $(".purchased ul")	
 		acts.checkUncheck();
 		acts.wishlist = $(".wishList ul");
 		acts.purchased = $(".purchased ul");
