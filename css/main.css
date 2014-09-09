@@ -7,11 +7,13 @@ body {
 }
 
 ul li {
-	font-size: 0.8em;
+	
 }
 
 ul li {
+	font-size: 0.8em;
 	list-style: none;
+	margin-bottom: 20px; 
 }
 
 /**************************************
@@ -53,9 +55,10 @@ button {
 /**************************************
 Lists
 **************************************/
-
 #wrapper {
 	margin: 20px 5%;
+	overflow: hidden;
+	margin-bottom: 130px;
 }
 
 .wishList, .purchased {
@@ -78,4 +81,12 @@ Lists
 .purchased {
 	background-color: rgba(221,85,63,.4); 
 	float: right;
+}
+
+/*Manipulate list Items*/ 
+ul li img {
+	width: 20px;
+	float: right;
+	margin-right: 15px;
+	/*display: none*/;
 }
