@@ -13,6 +13,12 @@ var acts = {
 		else return true;
 	},
 	
+	//A function that keeps track of the number of items in a list
+	numItems: function(){
+		$(".wishList .numItems").html($("wishList li").length);
+		$(".purchased .numItems").html($("purchased li").length);
+	},
+
 	//create a function that adds the new entry into the list
 	addtoList: function(e){
 		//Assign the value of the item to a variable newItem
@@ -28,6 +34,7 @@ var acts = {
 		console.log(content);
 		// $(content).appendTo(".wishlist ul");
 		$(".wishList ul").append(content)
+		acts.numItems();
 		acts.item.val("");
 	},
 
@@ -48,6 +55,7 @@ var acts = {
 	}, 
 	initEvents:function()
 	{
+		acts.numItems();
 		$(document).on("click", "#delete",acts.deleteItem);
 		$(document).on("change", "input[type=checkbox]",acts.checkUncheck);
 		acts.addItem.click(acts.addtoList);	
