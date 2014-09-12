@@ -15,8 +15,8 @@ var acts = {
 	
 	//A function that keeps track of the number of items in a list
 	numItems: function(){
-		$(".wishList .numItems").html($("wishList li").length);
-		$(".purchased .numItems").html($("purchased li").length);
+		$(".wishList .numItems").html($(".wishList li").length);
+		$(".purchased .numItems").html($(".purchased li").length);
 	},
 
 	//create a function that adds the new entry into the list
@@ -45,17 +45,20 @@ var acts = {
 			} else {
 				$(this).parent().appendTo(acts.wishlist);
 			}
+			acts.numItems();
 	},
 
 	//Delete function
 	deleteItem: function(){
-		if(confirm("Are you sure you want to delete this item from your list?"))
+		if(confirm("Are you sure you want to delete this item from your list?")){
 			$(this).parent().remove();
+		}
+		acts.numItems();
+
 		
 	}, 
 	initEvents:function()
 	{
-		acts.numItems();
 		$(document).on("click", "#delete",acts.deleteItem);
 		$(document).on("change", "input[type=checkbox]",acts.checkUncheck);
 		acts.addItem.click(acts.addtoList);	
