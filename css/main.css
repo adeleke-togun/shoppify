@@ -16,6 +16,10 @@ ul li {
 	margin-bottom: 20px; 
 }
 
+.wishList ul, .purchased ul {
+	clear: both;
+}
+
 /**************************************
 HEADER
 **************************************/
